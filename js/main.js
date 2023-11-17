@@ -14,6 +14,7 @@ submitBtn.addEventListener("click", () => {
   resetInputs();
 });
 
+// storing a product
 function addToStoredProducts() {
   let product = {
     company: productCompany.value,
@@ -35,6 +36,7 @@ function addToStoredProducts() {
   products.push(product);
 }
 
+// clear inputs after adding a product
 function resetInputs() {
   let inputs = document.querySelectorAll(".form-control");
   for (let i = 0; i < inputs.length; i++) {
@@ -42,6 +44,7 @@ function resetInputs() {
   }
 }
 
+// display the products list to the DOM ( from localstorge)
 function displayStoredProducts() {
   let storedProducts = document.getElementById("stored-poducts");
 
@@ -64,6 +67,7 @@ function displayStoredProducts() {
   localStorage.setItem("productsList", JSON.stringify(products));
 }
 
+// editing product after updating it
 function editStoredProduct(index) {
   productCompany.value = products[index].company;
   productName.value = products[index].name;
@@ -97,12 +101,14 @@ function updateStoredProduct() {
   alert(`Product ${index + 1} successfully updated`);
 }
 
+// remove product from local storage
 function removeStoredProduct(index) {
   products.splice(index, 1);
   localStorage.setItem("productsList", JSON.stringify(products));
   displayStoredProducts();
 }
 
+// search products in localstorage
 function searchStoredProducts(s){
  
 	let trs = "";

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Products Crud Operations</title>
+</head>
+
+<body>
+
+    <div class="box d-flex justify-content-between">
+
+        <div class="form mt-5 mx-4 d-flex align-items-center flex-column" style="width: 26%;">
+            <div class="mb-3 input-container w-100">
+                <input id="company" type="text" class="form-control" placeholder="Company Name" />
+            </div>
+            <div class="mb-3 input-container w-100">
+                <input id="name" type="text" class="form-control" placeholder="Product Name">
+            </div>
+            <div class="mb-3 input-container w-100">
+                <input id="desc" type="text" class="form-control" placeholder="Product Description">
+            </div>
+            <div class="mb-3 input-container w-100">
+                <input id="price" type="text" class="form-control" placeholder="Product Price">
+            </div>
+            <button id="submit-btn" class="btn btn-info text-white fw-bold mt-2" style="width: 100%;">add
+                Product</button>
+            <button id="update-btn" class="btn btn-info text-white fw-bold d-none mt-2" style="width: 100%;"
+                onclick="updateStoredProduct()">update Product</button>
+        </div>
+        <div class="products-container me-4" style="width: 74%;">
+            <input id="search-product" class="mt-5 form-control" type="text" placeholder="Search for a product" onkeyup = "searchStoredProducts(this.value)">
+            <div id="table-responsive" class="table-responsive mt-3">
+                <table id="table" class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Company</th>
+                            <th>Product</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="stored-poducts">
+                        <!-- list of products here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

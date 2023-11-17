@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e0dede;
+}
+
+form .input-container {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 900px){
+    .box{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form {
+        width: 65% !important;
+    }
+
+    .products-container {
+        width: 90% !important;
+        margin: 5% !important;
+    }
+}
+

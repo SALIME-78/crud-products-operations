@@ -23,7 +23,7 @@ function addToStoredProducts() {
     price: productPrice.value,
   };
    
-  if(product.company == "" || product.name =="" || product.description=="" || product.price==""){
+  if(product.company == "" || product.name =="" || product.description=="" || product.price==""){
     return alert('All fields must be completed')
   }
 
@@ -36,7 +36,7 @@ function addToStoredProducts() {
   products.push(product);
 }
 
-// clear inputs after adding a product
+// clear inputs before adding a product
 function resetInputs() {
   let inputs = document.querySelectorAll(".form-control");
   for (let i = 0; i < inputs.length; i++) {
@@ -129,7 +129,7 @@ function searchStoredProducts(s){
 		    `
 		 }
 	}
-  console.log(trs)
+ 
 	document.getElementById("stored-poducts").innerHTML = trs;
   if(document.getElementById('search-product').value ==""){
     trs=""
